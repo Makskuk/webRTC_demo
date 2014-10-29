@@ -7,6 +7,11 @@
     "test": "",
     "start": "node server.js"
   },
+  "dependencies": {
+    "express": "*",
+    "path": "*",
+    "http": "*"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Makskuk/webRTC_demo.git"
