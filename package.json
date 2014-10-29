@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "first try to use WebRTC",
   "main": "server.js",
+  "subdomain": "lunoxod",
   "scripts": {
     "test": "",
     "start": "node server.js"
