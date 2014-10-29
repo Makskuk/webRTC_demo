@@ -2,6 +2,7 @@
   "name": "webRTC_demo",
   "version": "0.0.1",
   "description": "first try to use WebRTC",
+  "engines": { "node": "0.10.x" },
   "main": "server.js",
   "subdomain": "lunoxod",
   "scripts": {
@@ -24,5 +25,8 @@
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/Makskuk/webRTC_demo/issues"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
