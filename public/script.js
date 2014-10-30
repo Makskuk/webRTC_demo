@@ -7,7 +7,11 @@ var offerConstraints = {};
 var streamConstraints = { 
 		"audio": true,
 		"video":{
-			"mandatory": { "chromeMediaSource": 'screen'  },
+			"mandatory": { 
+				"maxWidth": "320", 
+				"maxHeight": "240", 
+				"maxFrameRate": "5" 
+			},
 			"optional": []
 		}
 	}; 
