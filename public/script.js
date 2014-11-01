@@ -3,6 +3,13 @@ var pc1, pc2;
 var servers = null;
 var offerConstraints = {};
 
+var socket = io.connect('/'); // URL сервера веб-сокетов (корневая страница сервера, с которого была загружена страница)
+
+socket.on('server event', function (data) {
+    console.log(data);
+    socket.emit('client event', { 'name': 'value' });
+});
+
 // Запрашиваем доступ и к аудио, и к видео
 var streamConstraints = { 
 		"audio": true,
@@ -30,18 +37,18 @@ function getUserMedia_error(error) {
 function getUserMedia_click() {
 	console.log("getUserMedia_click()");
 	navigator.getUserMedia = (	navigator.getUserMedia ||
-				 				navigator.webkitGetUserMedia ||
-								navigator.mozGetUserMedia ||
-								navigator.msGetUserMedia);
+                                navigator.webkitGetUserMedia ||
+                                navigator.mozGetUserMedia ||
+                                navigator.msGetUserMedia);
 
 	if (navigator.getUserMedia) {
 		navigator.getUserMedia (
 					streamConstraints,
 					getUserMedia_success,
 					getUserMedia_error
-	   );
+        );
 	} else {
-	   console.log("getUserMedia not supported");
+        console.log("getUserMedia not supported");
 	}
 }
 

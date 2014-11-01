@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "*",
     "path": "*",
-    "http": "*"
+    "http": "*",
+    "socket.io": "*"
   },
   "repository": {
     "type": "git",
